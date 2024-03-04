@@ -124,6 +124,7 @@ CFLAGS_DEBUG=$(CFLAGS) -O0
 CFLAGS_SMALL=$(CFLAGS) -Os
 CFLAGS_OPT=$(CFLAGS) -O2
 CFLAGS_NOLTO:=$(CFLAGS_OPT)
+LDFLAGS+=-static
 ifdef CONFIG_COSMO
 LDFLAGS+=-s # better to strip by default
 else
